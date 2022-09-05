@@ -29,7 +29,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -128,13 +128,32 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Engine\Engine.cpp" />
+    <ClCompile Include="Engine\Graphics\SOIL\src\image_DXT.c" />
+    <ClCompile Include="Engine\Graphics\SOIL\src\image_helper.c" />
+    <ClCompile Include="Engine\Graphics\SOIL\src\original\stb_image-1.09.c" />
+    <ClCompile Include="Engine\Graphics\SOIL\src\original\stb_image-1.16.c" />
+    <ClCompile Include="Engine\Graphics\SOIL\src\SOIL.c" />
+    <ClCompile Include="Engine\Graphics\SOIL\src\stb_image_aug.c" />
+    <ClCompile Include="Engine\Graphics\SOIL\src\test_SOIL.cpp" />
+    <ClCompile Include="Engine\Graphics\Texture.cpp" />
+    <ClCompile Include="Engine\Graphics\Texture.h" />
     <ClCompile Include="Twitch.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Engine.h" />
+    <ClInclude Include="Engine\Graphics\SOIL\src\image_DXT.h" />
+    <ClInclude Include="Engine\Graphics\SOIL\src\image_helper.h" />
+    <ClInclude Include="Engine\Graphics\SOIL\src\SOIL.h" />
+    <ClInclude Include="Engine\Graphics\SOIL\src\stbi_DDS_aug.h" />
+    <ClInclude Include="Engine\Graphics\SOIL\src\stbi_DDS_aug_c.h" />
+    <ClInclude Include="Engine\Graphics\SOIL\src\stb_image_aug.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Engine\Graphics\SOIL\lib\libSOIL.a" />
+    <Library Include="Engine\Graphics\SOIL\lib\SOIL.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
