@@ -74,8 +74,9 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>Default</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,13 +129,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Engine\Engine.cpp" />
-    <ClCompile Include="Engine\Graphics\SOIL\src\image_DXT.c" />
-    <ClCompile Include="Engine\Graphics\SOIL\src\image_helper.c" />
-    <ClCompile Include="Engine\Graphics\SOIL\src\original\stb_image-1.09.c" />
-    <ClCompile Include="Engine\Graphics\SOIL\src\original\stb_image-1.16.c" />
-    <ClCompile Include="Engine\Graphics\SOIL\src\SOIL.c" />
-    <ClCompile Include="Engine\Graphics\SOIL\src\stb_image_aug.c" />
-    <ClCompile Include="Engine\Graphics\SOIL\src\test_SOIL.cpp" />
+    <ClCompile Include="Engine\Graphics\SOIL\image_dxt.c" />
+    <ClCompile Include="Engine\Graphics\SOIL\image_helper.c" />
+    <ClCompile Include="Engine\Graphics\SOIL\soil.c" />
+    <ClCompile Include="Engine\Graphics\SOIL\stb_image_aug.c" />
     <ClCompile Include="Engine\Graphics\Sprite.cpp" />
     <ClCompile Include="Engine\Graphics\Texture.cpp" />
     <ClCompile Include="Engine\Graphics\Texture.h" />
@@ -142,20 +140,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Engine.h" />
-    <ClInclude Include="Engine\Graphics\SOIL\src\image_DXT.h" />
-    <ClInclude Include="Engine\Graphics\SOIL\src\image_helper.h" />
-    <ClInclude Include="Engine\Graphics\SOIL\src\SOIL.h" />
-    <ClInclude Include="Engine\Graphics\SOIL\src\stbi_DDS_aug.h" />
-    <ClInclude Include="Engine\Graphics\SOIL\src\stbi_DDS_aug_c.h" />
-    <ClInclude Include="Engine\Graphics\SOIL\src\stb_image_aug.h" />
+    <ClInclude Include="Engine\Graphics\SOIL\SOIL\image_dxt.h" />
+    <ClInclude Include="Engine\Graphics\SOIL\SOIL\image_helper.h" />
+    <ClInclude Include="Engine\Graphics\SOIL\SOIL\SOIL.h" />
+    <ClInclude Include="Engine\Graphics\SOIL\SOIL\stbi_dds_aug.h" />
+    <ClInclude Include="Engine\Graphics\SOIL\SOIL\stbi_dds_aug_c.h" />
+    <ClInclude Include="Engine\Graphics\SOIL\SOIL\stb_image_aug.h" />
     <ClInclude Include="Engine\Graphics\Sprite.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Library Include="Engine\Graphics\SOIL\lib\libSOIL.a" />
-    <Library Include="Engine\Graphics\SOIL\lib\SOIL.lib" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\..\Downloads\Biplane.png" />

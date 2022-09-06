@@ -15,7 +15,7 @@
 
 #define SOIL_CHECK_FOR_GL_ERRORS 0
 
-#ifdef WIN32
+#ifdef _WIN32
 	#define WIN32_LEAN_AND_MEAN
 	#include <windows.h>
 	#include <wingdi.h>
@@ -30,10 +30,10 @@
 	#include <GL/glx.h>
 #endif
 
-#include "SOIL.h"
-#include "stb_image_aug.h"
-#include "image_helper.h"
-#include "image_DXT.h"
+#include "SOIL/SOIL.h"
+#include "SOIL/stb_image_aug.h"
+#include "SOIL/image_helper.h"
+#include "SOIL/image_dxt.h"
 
 #include <stdlib.h>
 #include <string.h>
@@ -1876,10 +1876,10 @@ int query_NPOT_capability( void )
 	if( has_NPOT_capability == SOIL_CAPABILITY_UNKNOWN )
 	{
 		/*	we haven't yet checked for the capability, do so	*/
-		if(
-			(NULL == strstr( (char const*)glGetString( GL_EXTENSIONS ),
-				"GL_ARB_texture_non_power_of_two" ) )
-			)
+		const char* glGetString_extentions_ptr = (char const*)glGetString(GL_EXTENSIONS);
+		if(glGetString_extentions_ptr != NULL 
+			&& NULL == strstr(glGetString_extentions_ptr,
+			"GL_ARB_texture_non_power_of_two"))
 		{
 			/*	not there, flag the failure	*/
 			has_NPOT_capability = SOIL_CAPABILITY_NONE;

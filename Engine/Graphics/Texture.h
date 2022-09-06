@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include "GLFW/glfw3.h"
-#include "SOIL/src/SOIL.h"
+#include "SOIL/SOIL/SOIL.h"
 
 class Texture
 {
