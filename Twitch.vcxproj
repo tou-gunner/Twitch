@@ -135,6 +135,7 @@
     <ClCompile Include="Engine\Graphics\SOIL\src\SOIL.c" />
     <ClCompile Include="Engine\Graphics\SOIL\src\stb_image_aug.c" />
     <ClCompile Include="Engine\Graphics\SOIL\src\test_SOIL.cpp" />
+    <ClCompile Include="Engine\Graphics\Sprite.cpp" />
     <ClCompile Include="Engine\Graphics\Texture.cpp" />
     <ClCompile Include="Engine\Graphics\Texture.h" />
     <ClCompile Include="Twitch.cpp" />
@@ -147,6 +148,7 @@
     <ClInclude Include="Engine\Graphics\SOIL\src\stbi_DDS_aug.h" />
     <ClInclude Include="Engine\Graphics\SOIL\src\stbi_DDS_aug_c.h" />
     <ClInclude Include="Engine\Graphics\SOIL\src\stb_image_aug.h" />
+    <ClInclude Include="Engine\Graphics\Sprite.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -154,6 +156,10 @@
   <ItemGroup>
     <Library Include="Engine\Graphics\SOIL\lib\libSOIL.a" />
     <Library Include="Engine\Graphics\SOIL\lib\SOIL.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\Downloads\Biplane.png" />
+    <Image Include="Assets\Art\Biplane.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

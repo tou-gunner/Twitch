@@ -48,6 +48,9 @@
     <ClCompile Include="Engine\Graphics\Texture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Engine\Graphics\Sprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Engine.h">
@@ -71,6 +74,9 @@
     <ClInclude Include="Engine\Graphics\SOIL\src\stbi_DDS_aug_c.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Engine\Graphics\Sprite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -78,5 +84,13 @@
   <ItemGroup>
     <Library Include="Engine\Graphics\SOIL\lib\libSOIL.a" />
     <Library Include="Engine\Graphics\SOIL\lib\SOIL.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\Downloads\Biplane.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Assets\Art\Biplane.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

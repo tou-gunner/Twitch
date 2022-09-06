@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Engine/Engine.h"
+#include "Engine/Graphics/Sprite.h"
 
 int main()
 {
@@ -9,10 +10,16 @@ int main()
 
 	engine.Initialize("Twitch!");
 
+	Sprite testSprite = Sprite("Assets/Art/Biplane.png", -100, -100);
+
 	while (true)
 	{
 		engine.Update();
-		engine.Render();
+		testSprite.Update();
+
+		engine.BeginRender();
+		testSprite.Render();
+		engine.EndRender();
 	}
 
 	return 0;

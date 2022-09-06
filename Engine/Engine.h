@@ -17,7 +17,8 @@ public:
 	bool Initialize(const char* windowTitle);
 
 	void Update();
-	void Render();
+	void BeginRender();
+	void EndRender();
 
 
 private:
