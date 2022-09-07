@@ -144,6 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\..\Downloads\Biplane.png" />
+    <Image Include="..\..\..\Downloads\files_icon.png" />
     <Image Include="Assets\Art\Biplane.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

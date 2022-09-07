@@ -36,8 +36,8 @@ bool Engine::Initialize(const char* windowTitle)
 	glfwSwapInterval(1);
 
 	const GLFWvidmode* mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
-	int xPos = (mode->width - SCREEN_HEIGHT) / 2;
-	int yPos = (mode->height - SCREEN_WIDTH) / 2;
+	int xPos = (mode->width - SCREEN_WIDTH) / 2;
+	int yPos = (mode->height - SCREEN_HEIGHT) / 2;
 	glfwSetWindowPos(window, xPos, yPos);
 
 	//GL Setup
@@ -45,7 +45,7 @@ bool Engine::Initialize(const char* windowTitle)
 	glViewport(0, 0, width, height);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	glOrtho(0, width, 0, height, -10, -10);
+	glOrtho(0, width, 0, height, -10, 10);
 	glDepthRange(-10, 10);
 	glMatrixMode(GL_MODELVIEW);
 

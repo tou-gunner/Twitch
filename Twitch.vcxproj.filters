@@ -49,5 +49,8 @@
     <Image Include="Assets\Art\Biplane.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="..\..\..\Downloads\files_icon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

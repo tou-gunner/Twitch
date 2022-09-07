@@ -1,7 +1,7 @@
 #ifndef TWITCH_SPRITE
 #define TWITCH_SPRITE
 
-#include <iostream>;
+#include <iostream>
 #include "GLFW/glfw3.h"
 #include "Texture.h"
 

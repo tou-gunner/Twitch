@@ -9,17 +9,17 @@ class Texture
 {
 public:
 	Texture();
-	Texture(int _id);
+	Texture(GLuint _id);
 	Texture(std::string path);
 
-	int GetID();
+	GLuint GetID();
 	int GetWidth();
 	int GetHeight();
 
 private:
 	bool GetTextureParams();
 
-	int id;
+	GLuint id;
 	int width;
 	int height;
 

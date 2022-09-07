@@ -5,7 +5,7 @@ Texture::Texture()
 	id = -1;
 }
 
-Texture::Texture(int _id)
+Texture::Texture(GLuint _id)
 {
 	id = _id;
 	if (!GetTextureParams())
@@ -23,7 +23,7 @@ Texture::Texture(std::string path)
 	}
 }
 
-int Texture::GetID()
+GLuint Texture::GetID()
 {
 	return id;
 }

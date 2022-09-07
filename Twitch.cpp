@@ -7,7 +7,6 @@ int main()
 	std::cout << "Hello World!" << std::endl;
 	
 	Engine engine;
-
 	engine.Initialize("Twitch!");
 
 	Sprite testSprite = Sprite("Assets/Art/Biplane.png", -100, -100);
