@@ -16,12 +16,13 @@ public:
 	void Render();
 
 	void SetPos(float x, float y);
+	void SetRot(float x);
 
 private:
 	Texture texture;
 	float xPos;
 	float yPos;
-
+	float rot;
 };
 
 #endif

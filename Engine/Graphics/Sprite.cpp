@@ -4,6 +4,7 @@ Sprite::Sprite()
 {
 	xPos = 0;
 	yPos = 0;
+	rot = 0;
 	texture = Texture();
 }
 
@@ -12,6 +13,7 @@ Sprite::Sprite(std::string imagePath)
 	texture = Texture(imagePath);
 	xPos = 0;
 	yPos = 0;
+	rot = 0;
 }
 
 Sprite::Sprite(std::string imagePath, float _xPos, float _yPos)
@@ -19,11 +21,12 @@ Sprite::Sprite(std::string imagePath, float _xPos, float _yPos)
 	texture = Texture(imagePath);
 	xPos = _xPos;
 	yPos = _yPos;
+	rot = 0;
 }
 
 void Sprite::Update()
 {
-
+	rot++;
 }
 
 void Sprite::Render()
@@ -34,6 +37,7 @@ void Sprite::Render()
 
 	//TRANSLATE -> ROTATE -> SCALE
 	glTranslatef(xPos, yPos, 0);
+	glRotatef(rot, 0, 0, 1);
 
 	//Rendering
 	glColor4f(1, 1, 1, 1);
@@ -51,4 +55,9 @@ void Sprite::SetPos(float x, float y)
 {
 	xPos = x;
 	yPos = y;
+}
+
+void Sprite::SetRot(float x)
+{
+	rot = x;
 }
