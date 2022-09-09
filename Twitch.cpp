@@ -12,7 +12,7 @@ int main()
 	Engine engine;
 	engine.Initialize("Twitch!");
 
-	Sprite testSprite = Sprite("Assets/Art/Biplane.png", -100, -100);
+	Sprite testSprite = Sprite("Assets/Art/Biplane.png", 0, 0);
 	testSprite.setScale(0.25f);
 
 	while (true)
@@ -24,16 +24,17 @@ int main()
 
 		if (Mouse::ButtonDown(GLFW_MOUSE_BUTTON_LEFT))
 		{
-			testSprite.RotateBy(10);
-		}
-		if (Mouse::ButtonDown(GLFW_MOUSE_BUTTON_RIGHT))
-		{
-			testSprite.RotateBy(-10);
+			testSprite.RotateBy(100);
 		}
 
-		if (Mouse::ButtonUp(GLFW_MOUSE_BUTTON_MIDDLE))
+		if (Mouse::ButtonUp(GLFW_MOUSE_BUTTON_RIGHT))
 		{
-			testSprite.RotateBy(10);
+			testSprite.RotateBy(-100);
+		}
+
+		if (Mouse::Button(GLFW_MOUSE_BUTTON_MIDDLE))
+		{
+			testSprite.RotateBy(100);
 		}
 
 		if (Keyboard::Key(GLFW_KEY_W))
