@@ -5,6 +5,7 @@ Sprite::Sprite()
 	xPos = 0;
 	yPos = 0;
 	rot = 0;
+	speed = 5;
 	texture = Texture();
 }
 
@@ -14,6 +15,7 @@ Sprite::Sprite(std::string imagePath)
 	xPos = 0;
 	yPos = 0;
 	rot = 0;
+	speed = 5;
 }
 
 Sprite::Sprite(std::string imagePath, float _xPos, float _yPos)
@@ -22,11 +24,12 @@ Sprite::Sprite(std::string imagePath, float _xPos, float _yPos)
 	xPos = _xPos;
 	yPos = _yPos;
 	rot = 0;
+	speed = 5;
 }
 
 void Sprite::Update()
 {
-	rot++;
+	
 }
 
 void Sprite::Render()
@@ -38,6 +41,7 @@ void Sprite::Render()
 	//TRANSLATE -> ROTATE -> SCALE
 	glTranslatef(xPos, yPos, 0);
 	glRotatef(rot, 0, 0, 1);
+	glScalef(xScale, yScale, 1);
 
 	//Rendering
 	glColor4f(1, 1, 1, 1);
@@ -51,13 +55,66 @@ void Sprite::Render()
 	glDisable(GL_TEXTURE_2D);
 }
 
-void Sprite::SetPos(float x, float y)
+void Sprite::SpeedTo(float x)
+{
+	speed = x;
+}
+
+void Sprite::SpeedBy(float x)
+{
+	speed += x;
+}
+
+void Sprite::MoveTo(float x, float y)
 {
 	xPos = x;
 	yPos = y;
 }
 
-void Sprite::SetRot(float x)
+void Sprite::MoveBy(float x, float y)
+{
+	xPos += x;
+	yPos += y;
+}
+
+void Sprite::MoveLeft()
+{
+	xPos -= speed;
+}
+
+void Sprite::MoveRight()
+{
+	xPos += speed;
+}
+
+void Sprite::MoveUp()
+{
+	yPos += speed;
+}
+
+void Sprite::MoveDown()
+{
+	yPos -= speed;
+}
+
+void Sprite::RotateTo(float x)
 {
 	rot = x;
+}
+
+void Sprite::RotateBy(float x)
+{
+	rot += x;
+}
+
+void Sprite::setScale(float x)
+{
+	xScale = x;
+	yScale = x;
+}
+
+void Sprite::setScale(float x, float y)
+{
+	xScale = x;
+	yScale = y;
 }
